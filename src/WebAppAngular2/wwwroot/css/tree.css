@@ -1,0 +1,9 @@
+﻿.tree {
+	padding-left: 15px;
+	list-style: none;
+	border: solid 1px #ddd;
+}
+
+	.tree li {
+		cursor: pointer;
+	}
