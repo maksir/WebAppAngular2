@@ -1,41 +1,45 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
+	<meta charset="utf-8" />
 	<base href="/" />
-    <title>Web app angular 2</title>
+	<title>Angular 2 template</title>
+
+	<link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+	<link href="lib/fontawesome/css/font-awesome.min.css" rel="stylesheet" />
+	<link href="app/css/treeview.css" rel="stylesheet" />
+	<script src="lib/jquery/jquery.min.js"></script>
+	<script src="lib/bootstrap/js/bootstrap.js"></script>
 </head>
 <body>
-	<my-app>Loading...</my-app>
 
-	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" />
-	<script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-	<script src="lib/es6-shim.min.js"></script>
-	<script src="lib/es6-promise.js"></script>
-	<script src="lib/system-polyfills.js"></script>
-	<script src="lib/system.js"></script>
-	<!--<script src="https://code.angularjs.org/tools/typescript.js"></script>-->
-	<script src="lib/angular2-polyfills.js"></script>	
-	<script src="lib/rx.js"></script>	
-	<script src="lib/angular2.dev.js"></script>
-	
+	<div class="container-fluid">
+		<ng2-app>
+			<i class="fa fa-spin fa-spinner"></i> Загружается
+		</ng2-app>
+	</div>
+
+	<script src="lib/ng2/es6-shim.js"></script>
+	<script src="lib/ng2/system-polyfills.js"></script>
+	<script src="lib/ng2/angular2-polyfills.js"></script>
+	<script src="lib/ng2/system.js"></script>
 
 	<script>
-        System.config({
-            packages: {
-                app: {
-                    format: 'register',
-                    defaultExtension: 'js'
-                }
-            }
-        });
-
-        System.import('app/boot').then(null, console.error.bind(console));
-
+		System.config({
+			defaultJSExtensions: true
+		});
 	</script>
 
-	<script src="lib/router.dev.js"></script>
-	<script src="lib/http.dev.js"></script>
+	<script src="lib/ng2/angular2.dev.js"></script>
+	<script src="lib/ng2/rx.js"></script>
+	<script src="lib/ng2/router.dev.js"></script>
+	<script src="lib/ng2/http.dev.js"></script>
+
+	<script>
+		System.import("app/boot")
+			.then(null, console.error.bind(console));
+	</script>
+
+
 </body>
 </html>

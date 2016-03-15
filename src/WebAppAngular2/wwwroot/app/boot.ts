@@ -1,10 +1,10 @@
 ﻿/// <reference path="../../node_modules/angular2/typings/browser.d.ts" />
-/// <reference path="../../node_modules/angular2/http.d.ts" />
-/// <reference path="../../node_modules/angular2/router.d.ts" />
-
-import { bootstrap } from "angular2/platform/browser";
-import {ROUTER_PROVIDERS} from 'angular2/router';
+import {bootstrap} from "angular2/platform/browser";
 import {HTTP_PROVIDERS} from 'angular2/http';
-import { MyApp } from "./MyApp";
+import {ROUTER_PROVIDERS} from 'angular2/router';
+import {AppComponent} from "./ng2app";
+import {TreeService} from './services/tree.service';
 
-bootstrap(MyApp, [ROUTER_PROVIDERS, HTTP_PROVIDERS]);
+
+bootstrap(AppComponent, [HTTP_PROVIDERS, ROUTER_PROVIDERS, TreeService]);
+
