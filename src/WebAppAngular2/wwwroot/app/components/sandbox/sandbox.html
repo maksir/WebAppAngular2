@@ -1,0 +1,20 @@
+﻿<div class="col-lg-3">
+	<div class="panel panel-info">
+		<div class="panel-body">
+			<tree-view [Nodes]="Nodes"
+					   [SelectedNode]="selectedNode"
+					   (onSelectedChanged)="onSelectNode($event)"
+					   (onRequestNodes)="onRequest($event)">
+			</tree-view>
+		</div>
+	</div>
+</div>
+<div class="col-lg-9">
+	<div class="panel panel-info">
+		<div class="panel-body">
+			<list-view [Items]="Items">
+				<div><span>{{item}}</span></div>
+			</list-view>
+		</div>
+	</div>
+</div>

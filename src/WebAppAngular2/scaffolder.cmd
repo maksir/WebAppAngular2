@@ -1,0 +1,1 @@
+dnx ef dbcontext scaffold "Data Source=winserv2012\sql2014;Initial Catalog=cist;Integrated Security=True" EntityFramework.MicrosoftSqlServer -a -c Data1Context -t MetaObject -o DataModels
