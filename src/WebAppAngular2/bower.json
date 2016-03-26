@@ -1,9 +1,10 @@
 {
-	"name": "ASP.NET",
-	"private": true,
-	"dependencies": {
-		"jquery": "2.2.1",
-		"bootstrap": "3.3.6",
-		"fontawesome": "4.5.0"
-	}
+  "name": "ASP.NET",
+  "private": true,
+  "dependencies": {
+    "jquery": "2.2.1",
+    "bootstrap": "3.3.6",
+    "fontawesome": "4.5.0",
+    "moment": "2.10.6"
+  }
 }
