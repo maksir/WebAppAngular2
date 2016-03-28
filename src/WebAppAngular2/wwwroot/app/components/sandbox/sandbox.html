@@ -9,12 +9,22 @@
 		</div>
 	</div>
 </div>
-<div class="col-lg-9">
-	<div class="panel panel-info">
-		<div class="panel-body">
-			<list-view [Items]="Items">
-				<div><span>{{item}}</span></div>
-			</list-view>
+<div class='col-sm-3'>
+	<div class="form-group">
+		<date-time [(value)]="currentDate" [options]="{pickTime:true}"></date-time>
+	</div>
+</div>
+<div class='col-sm-12'>
+	<div class="form-horizontal">
+		<div class="form-group">
+			<div class="col-sm-3">
+				<span class="control-label">Период с</span>
+				<date-time [(value)]="currentDate" [options]="{pickTime:true}"></date-time>
+			</div>
+			<div class="col-sm-3">
+				<span class="control-label">по</span>
+				<date-time [(value)]="currentDate" [options]="{pickTime:true}"></date-time>
+			</div>
 		</div>
 	</div>
 </div>

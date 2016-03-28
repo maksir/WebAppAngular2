@@ -6,6 +6,7 @@ using Microsoft.AspNet.Mvc;
 using WebAppAngular2.DataModels;
 using Microsoft.Data.Entity;
 
+
 // For more information on enabling Web API for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace WebAppAngular2.Controllers

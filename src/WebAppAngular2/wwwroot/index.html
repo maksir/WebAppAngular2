@@ -7,9 +7,15 @@
 
 	<link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
 	<link href="lib/fontawesome/css/font-awesome.min.css" rel="stylesheet" />
+	<link href="lib/bootstrap/css/bootstrap-datetimepicker.css" rel="stylesheet" />
 	<link href="app/css/treeview.css" rel="stylesheet" />
+
+
 	<script src="lib/jquery/jquery.min.js"></script>
 	<script src="lib/bootstrap/js/bootstrap.js"></script>
+	<script src="lib/moment/js/moment.js"></script>
+	<script src="lib/moment/js/locale/ru.js"></script>
+	<script src="lib/bootstrap/js/bootstrap-datetimepicker.min.js"></script>
 </head>
 <body>
 
@@ -20,13 +26,16 @@
 	</div>
 
 	<script src="lib/ng2/es6-shim.js"></script>
+	<script src="lib/ng2/typescript.js"></script>
 	<script src="lib/ng2/system-polyfills.js"></script>
 	<script src="lib/ng2/angular2-polyfills.js"></script>
 	<script src="lib/ng2/system.js"></script>
 
 	<script>
 		System.config({
-			defaultJSExtensions: true
+			transpiler: 'typescript',
+			typescriptOptions: { emitDecoratorMetadata: true },
+			packages: { app: { defaultExtension: 'ts' } }
 		});
 	</script>
 

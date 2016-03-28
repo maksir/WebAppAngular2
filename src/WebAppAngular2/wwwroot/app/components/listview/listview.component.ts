@@ -1,5 +1,5 @@
 ﻿import {Component, Host, Query, Inject, ElementRef, Input, Output, EventEmitter, ComponentMetadata, ContentChild, ViewChildren, QueryList, AfterContentInit, AfterViewInit, OnInit } from 'angular2/core';
-import {NgFor} from 'angular2/common';
+import {NgFor, FORM_DIRECTIVES, CORE_DIRECTIVES} from 'angular2/common';
 import {isBlank} from 'angular2/src/facade/lang';
 import {ItemTemplateComponent} from './itemtemplate.component'
 

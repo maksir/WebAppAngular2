@@ -1,3 +1,4 @@
+"use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -36,7 +37,7 @@ var ItemTemp = (function () {
         __metadata('design:paramtypes', [core_2.ViewContainerRef, core_2.TemplateRef])
     ], ItemTemp);
     return ItemTemp;
-})();
+}());
 exports.ItemTemp = ItemTemp;
 var ListViewComponent = (function () {
     function ListViewComponent(_viewContainer) {
@@ -72,6 +73,6 @@ var ListViewComponent = (function () {
         __metadata('design:paramtypes', [core_2.ViewContainerRef])
     ], ListViewComponent);
     return ListViewComponent;
-})();
+}());
 exports.ListViewComponent = ListViewComponent;
 //# sourceMappingURL=listview.component.js.map
