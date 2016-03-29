@@ -13,22 +13,27 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('angular2/core');
 var DateTimeComponent = (function () {
     function DateTimeComponent() {
+        this.valueChange = new core_1.EventEmitter();
     }
     DateTimeComponent.prototype.ngAfterViewInit = function () {
-        this._group = $(this.group.nativeElement);
         this._input = $(this.input.nativeElement);
-        this._group.datetimepicker({ pickTime: false });
+        this._group = $(this.group.nativeElement);
+        this._group.datetimepicker(this.options);
         if (this.value) {
-            this._input.val(this.value);
+            this._group.data('DateTimePicker').setDate(this.value);
         }
+        this._group.on('change', this.onValueChange.bind(this));
     };
     DateTimeComponent.prototype.ngOnChanges = function (changes) {
         if (changes['value']) {
             var val = changes['value'].currentValue;
-            if (this._input) {
-                this._input.val(val);
+            if (this._group) {
+                this._group.data('DateTimePicker').setDate(val);
             }
         }
+    };
+    DateTimeComponent.prototype.onValueChange = function ($event) {
+        this.valueChange.emit(this._input.val());
     };
     __decorate([
         core_1.ViewChild('group'), 
@@ -42,6 +47,14 @@ var DateTimeComponent = (function () {
         core_1.Input(), 
         __metadata('design:type', String)
     ], DateTimeComponent.prototype, "value", void 0);
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', Object)
+    ], DateTimeComponent.prototype, "options", void 0);
+    __decorate([
+        core_1.Output(), 
+        __metadata('design:type', core_1.EventEmitter)
+    ], DateTimeComponent.prototype, "valueChange", void 0);
     DateTimeComponent = __decorate([
         core_1.Component({
             selector: 'date-time',

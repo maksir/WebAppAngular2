@@ -12,15 +12,19 @@ var core_1 = require('angular2/core');
 //import {CORE_DIRECTIVES} from 'angular2/common';
 var treeview_component_1 = require('../treeview/treeview.component');
 var tree_service_1 = require('../../services/tree.service');
+var metaobject_service_1 = require('../../services/metaobject.service');
 var datetime_component_1 = require('../datetime.component');
+var select2_component_1 = require('../select2.component');
 var SandboxComponent = (function () {
-    function SandboxComponent(treeService) {
+    function SandboxComponent(treeService, moService) {
         this.treeService = treeService;
-        this.currentDate = "24.09.1976";
+        this.moService = moService;
+        this.currentDate = "24.09.1976 06:30";
     }
     SandboxComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.treeService.GetNodes(0).subscribe(function (res) { return _this.Nodes = res; }, function (error) { return console.log(error); });
+        this.moService.GetList(56).subscribe(function (res) { return _this.MoList = res; }, function (error) { return console.log(error); });
         this.Items = new Array();
         this.Items.push({ id: 1, name: 'first' }, { id: 2, name: 'second' });
     };
@@ -36,9 +40,9 @@ var SandboxComponent = (function () {
     SandboxComponent = __decorate([
         core_1.Component({
             templateUrl: '/app/components/sandbox/sandbox.html',
-            directives: [treeview_component_1.TreeViewComponent, datetime_component_1.DateTimeComponent]
+            directives: [treeview_component_1.TreeViewComponent, datetime_component_1.DateTimeComponent, select2_component_1.Select2Component]
         }), 
-        __metadata('design:paramtypes', [tree_service_1.TreeService])
+        __metadata('design:paramtypes', [tree_service_1.TreeService, metaobject_service_1.MetaObjectService])
     ], SandboxComponent);
     return SandboxComponent;
 }());

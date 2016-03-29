@@ -5,5 +5,6 @@ var http_1 = require('angular2/http');
 var router_1 = require('angular2/router');
 var ng2app_1 = require("./ng2app");
 var tree_service_1 = require('./services/tree.service');
-browser_1.bootstrap(ng2app_1.AppComponent, [http_1.HTTP_PROVIDERS, router_1.ROUTER_PROVIDERS, tree_service_1.TreeService]);
+var metaobject_service_1 = require('./services/metaobject.service');
+browser_1.bootstrap(ng2app_1.AppComponent, [http_1.HTTP_PROVIDERS, router_1.ROUTER_PROVIDERS, tree_service_1.TreeService, metaobject_service_1.MetaObjectService]);
 //# sourceMappingURL=boot.js.map

@@ -9,11 +9,20 @@
 		</div>
 	</div>
 </div>
-<div class='col-sm-3'>
+<div class='col-sm-8'>
 	<div class="form-group">
+		<span class="control-label">Период с</span>
 		<date-time [(value)]="currentDate" [options]="{pickTime:true}"></date-time>
 	</div>
+	<div class="form-group">
+		<span class="control-label col-sm-2">Период с</span>
+		<div class="col-sm-5">
+			<select2 [(value)]="currentMo" [options]="MoList"></select2>
+		</div>
+	</div>
+
 </div>
+
 <div class='col-sm-12'>
 	<div class="form-horizontal">
 		<div class="form-group">
