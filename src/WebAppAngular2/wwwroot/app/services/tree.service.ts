@@ -11,6 +11,6 @@ export class TreeService {
 	GetNodes(parentId: number) {
 
 		return this.http.get("/api/tree/" + parentId.toString())
-			.map(res=> res.json());
+			;//.map(res=> res.json());
 	}
 }

@@ -1,8 +1,11 @@
 ﻿<ul class="treenodes">
 	<li *ngFor="#node of Nodes" class="treenode">
-		<i class="nodebutton fa fa-{{node.isExpanded ? 'minus' : 'plus'}}-square-o"
-		   (click)="onExpand(node)">
-		</i>
+
+		<div style="display:inline-block">
+			<i class="nodebutton fa fa-{{node.isExpanded ? 'minus' : 'plus'}}-square-o"
+			   (click)="onExpand(node)">
+			</i>
+		</div>
 
 		<span class="nodetext {{node == SelectedNode ? 'bg-info' : ''}}"
 			  (click)="onSelectNode(node)">

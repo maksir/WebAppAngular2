@@ -38,7 +38,7 @@ export class MetaObjectComponent implements OnInit {
 	ngOnInit() {
 
 		this.mo.GetList(0).subscribe(
-			res => this.Nodes = res,
+			res => this.Nodes = res.json(),
 			error=> console.log(error)
 		);
 	}
@@ -78,7 +78,7 @@ export class MetaObjectComponent implements OnInit {
 
 	private requestData(parent: MetaObject) {
 		this.mo.GetList(parent.id).subscribe(
-			res => parent.children = res,
+			res => parent.children = res.json(),
 			error=> console.log(error),
 			()=> this.calculatePages()
 		);

@@ -15,5 +15,12 @@ tree-view .nodebutton {
 tree-view .nodetext {
 	padding-left: 3px;
 	padding-right: 3px;
+	width: 80%;
+	white-space:nowrap;
+	display:inline-block;
 	cursor: pointer;
+	overflow: hidden;
+	-ms-text-overflow: ellipsis;
+	-o-text-overflow: ellipsis;
+	text-overflow: ellipsis;
 }

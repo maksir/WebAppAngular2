@@ -15,7 +15,8 @@ gulp.task('ng2', function () {
 		"node_modules/angular2/bundles/angular2-polyfills.js",
 		"node_modules/systemjs/dist/system-polyfills.js",
 		"node_modules/systemjs/dist/system-polyfills.js.map",
-		"node_modules/typescript/lib/typescript.js"
+		"node_modules/typescript/lib/typescript.js",
+		"node_modules/angular2/es6/dev/src/testing/shims_for_ie.js"
 
 	])
 		.pipe(gulp.dest("wwwroot/lib/ng2"));

@@ -18,8 +18,8 @@ export class TreeViewComponent {
 	@Input() Nodes: Array<ITreeNode>;
 	@Input() SelectedNode: ITreeNode;
 
-	@Output() onSelectedChanged: EventEmitter<ITreeNode> = new EventEmitter();
-	@Output() onRequestNodes: EventEmitter<ITreeNode> = new EventEmitter();
+	@Output() onSelectedChanged: EventEmitter<ITreeNode> = new EventEmitter<ITreeNode>();
+	@Output() onRequestNodes: EventEmitter<ITreeNode> = new EventEmitter<ITreeNode>();
 
 	constructor() { }
 

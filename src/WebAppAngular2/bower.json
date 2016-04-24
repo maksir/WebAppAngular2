@@ -6,6 +6,6 @@
     "bootstrap": "3.3.6",
     "fontawesome": "4.5.0",
     "moment": "2.10.6",
-    "select2": "4.0.0"
+    "select2": "4.0.2"
   }
 }

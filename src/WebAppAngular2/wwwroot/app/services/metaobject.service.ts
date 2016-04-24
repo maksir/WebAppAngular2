@@ -11,7 +11,7 @@ export class MetaObjectService {
 
 	GetList(parent: number) {
 		return this.http.get("/api/metaobject/" + parent.toString())
-			.map(res=> res.json());
+			;//.map(res=> res.json());
 	}
 
 }

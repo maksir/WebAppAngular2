@@ -1,4 +1,4 @@
-﻿<div class="col-lg-3">
+﻿<!--<div class="col-lg-3">
 	<div class="panel panel-info">
 		<div class="panel-body">
 			<tree-view [Nodes]="Nodes"
@@ -8,22 +8,27 @@
 			</tree-view>
 		</div>
 	</div>
-</div>
+</div>-->
 <div class='col-sm-8'>
-	<div class="form-group">
-		<span class="control-label">Период с</span>
-		<date-time [(value)]="currentDate" [options]="{pickTime:true}"></date-time>
-	</div>
-	<div class="form-group">
-		<span class="control-label col-sm-2">Период с</span>
-		<div class="col-sm-5">
-			<select2 [(value)]="currentMo" [options]="MoList"></select2>
+	<!--<form>-->
+	<div class="form-horizontal">
+		<div class="form-group">
+			<span class="control-label col-sm-2">Select2</span>
+			<div class="col-sm-4">
+				<!--<select2 [(ngModel)]="currentMo" [options]="MoList"></select2>-->
+				<my-input [(ngModel)]="currentMo"></my-input>
+			</div>
 		</div>
-	</div>
 
+	</div>
+	<!--</form>-->
 </div>
 
-<div class='col-sm-12'>
+<div>
+	<a class="btn btn-default" (click)="click()"></a>
+</div>
+
+<!--<div class='col-sm-12'>
 	<div class="form-horizontal">
 		<div class="form-group">
 			<div class="col-sm-3">
@@ -36,4 +41,4 @@
 			</div>
 		</div>
 	</div>
-</div>
+</div>-->
