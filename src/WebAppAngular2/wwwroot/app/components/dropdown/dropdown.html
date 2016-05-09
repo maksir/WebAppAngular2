@@ -1,0 +1,13 @@
+﻿<div class="dropdown">
+	<span class="dropdowncontrol">
+		{{(!selectedItem) ? placeholder : selectedItem.text}}
+		<span (click)="showHide()" class="buttondown pull"><i class="fa fa-chevron-down"></i></span>
+		<span *ngIf="selectedItem" (click)="clearSelect()" class="buttonclear"><i class="fa fa-close"></i></span>
+	</span>
+	<div *ngIf="showDropDown" class="dropdownform" (keydown)="onKeyDown($event)">
+		<input #input type="text" [(ngModel)]="searchValue" class="searchinput" (keypress)="onKeyPress($event)"/>
+		<ul class="itemslist">
+			<li *ngFor="#i of items" class="item" (click)="onSelectItem(i)">{{i.text}}</li>
+		</ul>
+	</div>
+</div>

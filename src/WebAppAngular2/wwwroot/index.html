@@ -8,6 +8,7 @@
 	<link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
 	<link href="lib/fontawesome/css/font-awesome.min.css" rel="stylesheet" />
 	<link href="lib/bootstrap/css/bootstrap-datetimepicker.css" rel="stylesheet" />
+	<link href="css/validation.css" rel="stylesheet" />
 	<link href="app/css/treeview.css" rel="stylesheet" />
 	<link href="lib/select2/css/select2.css" rel="stylesheet" />
 
@@ -24,9 +25,36 @@
 	<script src="lib/ng2/system-polyfills.js"></script>
 
 	<script src="lib/ng2/angular2-polyfills.js"></script>
-	<!--<script src="lib/ng2/typescript.js"></script>-->
+	<script src="lib/ng2/typescript.js"></script>
 	<script src="lib/ng2/system.js"></script>
 	<script src="lib/ng2/rx.js"></script>
+	<script>
+		System.config({
+			transpiler: 'typescript',
+			typescriptOptions: {
+				//target: 'es5',
+				//module: 'system',
+				//moduleResolution: "node",
+				emitDecoratorMetadata: true
+			},
+			packages: {
+				app: {
+			//		format: 'register',
+					defaultExtension: 'ts'
+				}
+			}
+		});
+	</script>
+
+	<script src="lib/ng2/angular2.dev.js"></script>
+	<script src="lib/ng2/router.dev.js"></script>
+	<script src="lib/ng2/http.dev.js"></script>
+
+
+	<script>
+		System.import("app/boot")
+			.then(null, console.error.bind(console));
+	</script>
 
 </head>
 <body>
@@ -38,34 +66,6 @@
 	</div>
 
 
-	<script>
-		System.config({
-			//transpiler: 'typescript',
-			//typescriptOptions: {
-			//	target: 'es5',
-			//	//module: 'system',
-			//	//moduleResolution: "node",
-			//	emitDecoratorMetadata: true
-			//},
-			packages: {
-				app: {
-					format: 'register',
-					defaultExtension: 'js'
-				}
-			}
-		});
-	</script>
-
-	<script src="lib/ng2/angular2.dev.js"></script>
-	<script src="lib/ng2/router.dev.js"></script>
-	<script src="lib/ng2/http.dev.js"></script>
-
-
-
-	<script>
-		System.import("app/boot")
-			.then(null, console.error.bind(console));
-	</script>
 
 
 </body>

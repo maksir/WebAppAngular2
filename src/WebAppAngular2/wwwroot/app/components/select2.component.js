@@ -30,29 +30,23 @@ System.register(['angular2/core', "angular2/common"], function(exports_1, contex
                 multi: true
             });
             Select2Component = (function () {
+                //get accessor
+                //  get value(): any { return this._value; };
+                //  //set accessor including call the onchange callback
+                //  set value(v: any) {
+                //if (v !== this._value) {
+                //	this._value = v;
+                //	this._onChangeCallback(v);
+                //}
+                //  }
                 function Select2Component(ngControl) {
+                    //this.ngControl.valueAccessor = this;
                     this.ngControl = ngControl;
-                    //@Input() public value: any;
                     this.valueChange = new core_1.EventEmitter();
                     this._value = '';
                     this._onTouchedCallback = noop;
                     this._onChangeCallback = noop;
-                    this.ngControl.valueAccessor = this;
                 }
-                Object.defineProperty(Select2Component.prototype, "value", {
-                    //get accessor
-                    get: function () { return this._value; },
-                    //set accessor including call the onchange callback
-                    set: function (v) {
-                        if (v !== this._value) {
-                            this._value = v;
-                            this._onChangeCallback(v);
-                        }
-                    },
-                    enumerable: true,
-                    configurable: true
-                });
-                ;
                 Select2Component.prototype.onTouched = function () {
                     this._onTouchedCallback();
                 };
@@ -97,6 +91,10 @@ System.register(['angular2/core', "angular2/common"], function(exports_1, contex
                     core_1.Input(), 
                     __metadata('design:type', Array)
                 ], Select2Component.prototype, "options", void 0);
+                __decorate([
+                    core_1.Input(), 
+                    __metadata('design:type', Object)
+                ], Select2Component.prototype, "value", void 0);
                 __decorate([
                     core_1.Output(), 
                     __metadata('design:type', core_1.EventEmitter)

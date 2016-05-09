@@ -1,4 +1,4 @@
-System.register(['angular2/core', 'angular2/common', '../treeview/treeview.component', '../../services/tree.service', '../../services/metaobject.service', '../datetime.component', '../select2.component', '../myInput.component'], function(exports_1, context_1) {
+System.register(['angular2/core', 'angular2/common', '../treeview/treeview.component', '../../services/tree.service', '../../services/metaobject.service', '../datetime.component', '../select2.component', '../dropdown/dropdown.component'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,7 +10,7 @@ System.register(['angular2/core', 'angular2/common', '../treeview/treeview.compo
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, common_1, treeview_component_1, tree_service_1, metaobject_service_1, datetime_component_1, select2_component_1, myInput_component_1;
+    var core_1, common_1, treeview_component_1, tree_service_1, metaobject_service_1, datetime_component_1, select2_component_1, dropdown_component_1;
     var SandboxComponent;
     return {
         setters:[
@@ -35,19 +35,19 @@ System.register(['angular2/core', 'angular2/common', '../treeview/treeview.compo
             function (select2_component_1_1) {
                 select2_component_1 = select2_component_1_1;
             },
-            function (myInput_component_1_1) {
-                myInput_component_1 = myInput_component_1_1;
+            function (dropdown_component_1_1) {
+                dropdown_component_1 = dropdown_component_1_1;
             }],
         execute: function() {
             SandboxComponent = (function () {
                 function SandboxComponent(treeService, moService) {
                     this.treeService = treeService;
                     this.moService = moService;
-                    this.currentMo = 14;
+                    this.currentMo = 4;
                     this.currentDate = "24.09.1976 06:30";
                 }
                 SandboxComponent.prototype.click = function () {
-                    this.currentMo = 40;
+                    this.currentMo = 5;
                 };
                 SandboxComponent.prototype.ngOnInit = function () {
                     var _this = this;
@@ -68,7 +68,7 @@ System.register(['angular2/core', 'angular2/common', '../treeview/treeview.compo
                 SandboxComponent = __decorate([
                     core_1.Component({
                         templateUrl: '/app/components/sandbox/sandbox.html',
-                        directives: [treeview_component_1.TreeViewComponent, datetime_component_1.DateTimeComponent, select2_component_1.Select2Component, common_1.FORM_DIRECTIVES, myInput_component_1.MyInputComponent]
+                        directives: [treeview_component_1.TreeViewComponent, datetime_component_1.DateTimeComponent, select2_component_1.Select2Component, common_1.FORM_DIRECTIVES, dropdown_component_1.DropDownComponent]
                     }), 
                     __metadata('design:paramtypes', [tree_service_1.TreeService, metaobject_service_1.MetaObjectService])
                 ], SandboxComponent);

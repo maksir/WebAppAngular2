@@ -1,4 +1,4 @@
-System.register(['angular2/core', "angular2/common"], function(exports_1, context_1) {
+System.register(['angular2/core'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,46 +10,30 @@ System.register(['angular2/core', "angular2/common"], function(exports_1, contex
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, common_1;
-    var MyInputComponent;
+    var core_1;
+    var Item, MyInputComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
-            },
-            function (common_1_1) {
-                common_1 = common_1_1;
             }],
         execute: function() {
             //const CUSTOM_VALUE_ACCESSOR = new Provider(
             //	NG_VALUE_ACCESSOR, { useExisting: forwardRef(() => MyInputComponent), multi: true });
+            Item = (function () {
+                function Item() {
+                }
+                return Item;
+            }());
+            exports_1("Item", Item);
             MyInputComponent = (function () {
                 function MyInputComponent() {
-                    this._value = ' ';
-                    //constructor(private cd: NgControl) {
-                    //	cd.valueAccessor = this;
-                    //}
-                    // ControlValueAccessor
-                    this.onChange = function (_) { };
-                    this.onTouched = function () { };
+                    this.placeholder = 'Значение не выбрано';
                 }
-                MyInputComponent.prototype.writeValue = function (value) {
-                    console.log('writeValue');
-                    this._value = value;
-                };
-                MyInputComponent.prototype.registerOnChange = function (fn) {
-                    console.log('registerOnChange');
-                    this.onChange = fn;
-                };
-                MyInputComponent.prototype.registerOnTouched = function (fn) {
-                    this.onTouched = fn;
-                };
                 MyInputComponent = __decorate([
                     core_1.Component({
                         selector: 'my-input',
-                        template: '<strong>{{_value}}</strong>',
-                        host: { '(input)': 'onChange($event.target.value)', '(blur)': 'onTouched()' },
-                        providers: [core_1.provide(common_1.NG_VALUE_ACCESSOR, { useClass: MyInputComponent, multi: true })]
+                        template: "<span class=\"form-control\">\u0417\u043D\u0430\u0447\u0435\u043D\u0438\u0435 \u043D\u0435 \u0432\u044B\u0431\u0440\u0430\u043D\u043E...\n</span>"
                     }), 
                     __metadata('design:paramtypes', [])
                 ], MyInputComponent);
@@ -59,4 +43,4 @@ System.register(['angular2/core', "angular2/common"], function(exports_1, contex
         }
     }
 });
-//# sourceMappingURL=myInput.component.js.map
+//# sourceMappingURL=MyInput.component.js.map

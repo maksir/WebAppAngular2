@@ -22,10 +22,10 @@ const SELECT2_CONTROL_VALUE_ACCESSOR = new Provider(
 	directives: [CORE_DIRECTIVES],
 	providers: [SELECT2_CONTROL_VALUE_ACCESSOR]
 })
-export class Select2Component implements ControlValueAccessor, AfterViewInit, AfterViewChecked, OnChanges {
+export class Select2Component implements AfterViewInit, AfterViewChecked, OnChanges {
 
 	@Input() public options: Array<any>;
-	//@Input() public value: any;
+	@Input() public value: any;
 	@Output() public valueChange: EventEmitter<any> = new EventEmitter<any>();
 
 	@ViewChild('select') private select: ElementRef;
@@ -37,19 +37,19 @@ export class Select2Component implements ControlValueAccessor, AfterViewInit, Af
 	private _onChangeCallback: (_: any) => void = noop;
 
 	//get accessor
-    get value(): any { return this._value; };
+  //  get value(): any { return this._value; };
 
-    //set accessor including call the onchange callback
-    set value(v: any) {
-		if (v !== this._value) {
-			this._value = v;
-			this._onChangeCallback(v);
-		}
-    }
+  //  //set accessor including call the onchange callback
+  //  set value(v: any) {
+		//if (v !== this._value) {
+		//	this._value = v;
+		//	this._onChangeCallback(v);
+		//}
+  //  }
 
 	constructor( @Optional() private ngControl: NgControl) {
 
-		this.ngControl.valueAccessor = this;
+		//this.ngControl.valueAccessor = this;
 		
 	}
 

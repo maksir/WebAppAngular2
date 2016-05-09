@@ -1,0 +1,38 @@
+﻿.dropdown {
+	position: absolute;
+	width: 100%;
+}
+
+
+.dropdowncontrol {
+}
+
+.buttondown, .buttonclear {
+	padding-left: 4px;
+	cursor:pointer;
+	float:right;
+}
+
+.dropdownform {
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	padding: 5px;
+	position: relative;
+	height: 11em;
+	overflow-y:scroll;
+}
+.searchinput {
+	width:100%;
+}
+.itemslist {
+	list-style:none;
+	padding:0;
+	margin:0;
+}
+.item {
+	padding:2px 5px;
+	cursor:pointer;
+}
+.item:hover {
+	background-color: #31b0d5;
+}

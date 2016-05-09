@@ -5,16 +5,18 @@ import {TreeService} from '../../services/tree.service';
 import {MetaObjectService} from '../../services/metaobject.service';
 import {DateTimeComponent} from '../datetime.component'
 import {Select2Component} from '../select2.component'
-import {MyInputComponent} from '../myInput.component';
+import {DropDownComponent} from '../dropdown/dropdown.component';
+import {DropdownValueAccessor} from '../dropdown/dropdown.directive';
+
 
 @Component({
 	templateUrl: '/app/components/sandbox/sandbox.html',
-	directives: [TreeViewComponent, DateTimeComponent, Select2Component, FORM_DIRECTIVES, MyInputComponent]
+	directives: [TreeViewComponent, DateTimeComponent, Select2Component, FORM_DIRECTIVES, DropDownComponent, DropdownValueAccessor]
 })
 export class SandboxComponent implements OnInit {
 
 	MoList: Array<any>;
-	currentMo: number = 14;
+	currentMo: number = 4;
 
 	Nodes: Array<ITreeNode>;
 	selectedNode: ITreeNode;
@@ -25,7 +27,7 @@ export class SandboxComponent implements OnInit {
 	}
 
 	click() {
-		this.currentMo = 40;
+		this.currentMo = 5;
 	}
 
 	ngOnInit() {

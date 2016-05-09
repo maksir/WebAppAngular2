@@ -9,23 +9,29 @@
 		</div>
 	</div>
 </div>-->
-<div class='col-sm-8'>
+<div class='col-sm-12'>
 	<!--<form>-->
 	<div class="form-horizontal">
 		<div class="form-group">
 			<span class="control-label col-sm-2">Select2</span>
 			<div class="col-sm-4">
-				<!--<select2 [(ngModel)]="currentMo" [options]="MoList"></select2>-->
-				<my-input [(ngModel)]="currentMo"></my-input>
+				<input type="number" [(ngModel)]="currentMo" min="1" max="6" class="form-control" />
 			</div>
 		</div>
+		<div class="form-group">
+			<span class="control-label col-sm-2">DropDown</span>
+			<div class="col-sm-4">
+				<dropdown [(ngModel)]="currentMo" required class="form-control"></dropdown>
+			</div>
+		</div>
+		{{currentMo}}
 
 	</div>
 	<!--</form>-->
 </div>
 
 <div>
-	<a class="btn btn-default" (click)="click()"></a>
+	<a class="btn btn-info" (click)="click()">777</a>
 </div>
 
 <!--<div class='col-sm-12'>

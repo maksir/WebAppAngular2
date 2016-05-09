@@ -4,16 +4,35 @@ import {ControlValueAccessor, NG_VALUE_ACCESSOR, CORE_DIRECTIVES, NgControl} fro
 //const CUSTOM_VALUE_ACCESSOR = new Provider(
 //	NG_VALUE_ACCESSOR, { useExisting: forwardRef(() => MyInputComponent), multi: true });
 
+export class Item {
+	value: any;
+	Text: string;
+}
+
 
 @Component({
 	selector: 'my-input',
-	template: '<strong>{{_value}}</strong>',
-	host: { '(input)': 'onChange($event.target.value)', '(blur)': 'onTouched()' },
-	providers: [provide(NG_VALUE_ACCESSOR, { useClass: MyInputComponent, multi: true })]
+	template: `<span class="form-control">Значение не выбрано...
+</span>`
 })
-export class MyInputComponent implements ControlValueAccessor {
+export class MyInputComponent {
 
-	private _value: any;
+	private placeholder = 'Значение не выбрано';
+	private selectedItem: Item;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 	//constructor(private cd: NgControl) {
 	//	cd.valueAccessor = this;
@@ -21,20 +40,21 @@ export class MyInputComponent implements ControlValueAccessor {
 	//}
 
 	// ControlValueAccessor
-	onChange = (_) => { };
-	onTouched = () => { };
+	//onChange = (_) => { };
+	//onTouched = () => { };
 
-	writeValue(value: any): void {
-		console.log('writeValue');
-		this._value = value;
-	}
+	//writeValue(value: any): void {
+	//	console.log('writeValue');
+	//	this._MyValue = value;
+	//	this._ttt = 'Изменилось';
+	//}
 
-	registerOnChange(fn: () => any): void {
-		console.log('registerOnChange');
-        this.onChange = fn;
-    }
+	//registerOnChange(fn: () => any): void {
+	//	console.log('registerOnChange');
+ //       this.onChange = fn;
+ //   }
 
-    registerOnTouched(fn: () => any): void {
-        this.onTouched = fn;
-    }
+ //   registerOnTouched(fn: () => any): void {
+ //       this.onTouched = fn;
+ //   }
 }
